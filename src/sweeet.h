@@ -7,6 +7,7 @@
 #include <SDL_Image.h>
 #include <SDL_ttf.h>
 #include <SDL_mixer.h>
+#include <time.h>
 #include <stdarg.h>
 #include <stdbool.h>
 #include <assert.h>
@@ -39,11 +40,13 @@ sweeetEngine sweeet = {false, 0, NULL};
 #include "events.h"
 #include "core.h"
 #include "palette.h"
-#include "ecm.h"
+
 #include "map.h"
-#include "init.h"
+
 #include "audio.h"
 #include "input.h"
 #include "render.h"
+#include "ecm.h"
+#include "init.h"
 
 #endif

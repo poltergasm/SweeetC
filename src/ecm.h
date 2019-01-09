@@ -8,6 +8,7 @@ typedef struct {
 	uint8_t StateNums[MAX_STATES];
     s_quad Anim[MAX_STATES][MAX_STATES];
 	int8_t State;
+	bool Flipped;
 	s_quad Sprite;
 	s_image Image;
 } s_entity;
@@ -16,6 +17,7 @@ typedef struct {
 	s_entity *entities[250];
 	void (*add)(s_entity *ent);
 	void (*tick)();
+	void (*render)();
 	uint8_t num_ents;
 } _s_ent_mgr;
 
@@ -54,9 +56,19 @@ void s_ent_mgr_tick()
 	}
 }
 
+void s_ent_mgr_render()
+{
+	uint8_t i;
+	for (i = 0; i < s_ent_mgr.num_ents; i++) {
+		s_entity *ent = s_ent_mgr.entities[i];
+		s_draw_quad(ent->Image, ent->x, ent->y, ent->Flipped, ent->Sprite);
+	}
+}
+
 void s_ent_mgr_init()
 {
 	s_ent_mgr.num_ents = 0;
     s_ent_mgr.add = &s_ent_mgr_add;
     s_ent_mgr.tick = &s_ent_mgr_tick;
+    s_ent_mgr.render = &s_ent_mgr_render;
 }
