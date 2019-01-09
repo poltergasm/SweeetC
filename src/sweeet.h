@@ -40,9 +40,7 @@ sweeetEngine sweeet = {false, 0, NULL};
 #include "events.h"
 #include "core.h"
 #include "palette.h"
-
 #include "map.h"
-
 #include "audio.h"
 #include "input.h"
 #include "render.h"
