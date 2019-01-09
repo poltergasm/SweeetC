@@ -1,0 +1,11 @@
+LIBRARY SDL2_mixer.dll
+
+EXPORTS
+Mix_FreeMusic
+Mix_FreeChunk
+Mix_CloseAudio
+Mix_OpenAudio
+Mix_LoadMUS
+Mix_LoadWAV_RW
+Mix_PlayMusic
+Mix_PlayChannelTimed

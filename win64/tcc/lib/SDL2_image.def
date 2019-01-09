@@ -1,0 +1,6 @@
+LIBRARY SDL2_image.dll
+
+EXPORTS
+IMG_Quit
+IMG_Init
+IMG_LoadTexture

@@ -1,0 +1,8 @@
+LIBRARY SDL2_ttf.dll
+
+EXPORTS
+TTF_CloseFont
+TTF_Init
+TTF_OpenFont
+TTF_RenderText_Solid
+TTF_SizeText
